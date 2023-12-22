@@ -1,0 +1,25 @@
+.collapse__Btn {
+    cursor: pointer;
+}
+
+.collapse__Content {
+    transition: all .3s;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    opacity: 0 !important;
+}
+
+.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FF9D00;
+}
+
+.swiper-pagination {
+    bottom: 3% !important;
+}

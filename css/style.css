@@ -1,0 +1,747 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+}
+
+.s1-water {
+    width: 100%;
+    position: absolute;
+    top: 28%;
+    left: 0%;
+    z-index: 3;
+}
+
+.s1-water_back {
+    width: 100%;
+    position: absolute;
+    top: 28%;
+    left: 0%;
+}
+
+.z1 {
+    z-index: 5;
+}
+
+.s1-pd {
+    width: 54%;
+    position: absolute;
+    top: 9%;
+    left: 34%;
+    transform: translateX(250%)translateY(-500%);
+}
+
+.intoWater {
+    transform: translateX(0%)translateY(0%);
+    transition: all 1.5s;
+    transition-timing-function: ease;
+}
+
+.s1-pd_back {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+}
+
+.s1-ball1 {
+    width: 16%;
+    position: absolute;
+    top: 72%;
+    left: 11%;
+    mix-blend-mode: multiply;
+}
+
+.s1-ball2 {
+    width: 13%;
+    position: absolute;
+    top: 77%;
+    left: 26.5%;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+}
+
+.s1-ball3 {
+    width: 17.5%;
+    position: absolute;
+    top: 75%;
+    left: 38%;
+    mix-blend-mode: multiply;
+}
+
+.ballShow {
+    opacity: 1;
+}
+
+.s1-bubble1 {
+    width: 13%;
+    position: absolute;
+    top: 44%;
+    left: 36%;
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.s1-bubble2 {
+    width: 28%;
+    position: absolute;
+    top: 38%;
+    left: 63%;
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.s1-bubble3 {
+    width: 18%;
+    position: absolute;
+    top: 52%;
+    left: 21%;
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.s1-bubble4 {
+    width: 12%;
+    position: absolute;
+    top: 63%;
+    left: 54%;
+    transform: translateY(30%);
+    opacity: 0;
+}
+
+.bubbleShow {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all 1.5s;
+}
+
+.s1-bubble1.bubbleShow,
+.s1-bubble4.bubbleShow {
+    opacity: .8;
+}
+
+.s1-1 {
+    width: 28.5%;
+    position: absolute;
+    top: 63%;
+    left: 4%;
+    scale: 0;
+}
+
+.s1-2 {
+    width: 36.5%;
+    position: absolute;
+    top: 77%;
+    left: 36%;
+    scale: 0;
+}
+
+.s1-3 {
+    width: 30.5%;
+    position: absolute;
+    top: 62%;
+    left: 69%;
+    scale: 0;
+}
+
+.bubbleZoomIn {
+    scale: 1;
+    transition: all .75s;
+}
+
+.s1-4 {
+    width: 53%;
+    position: absolute;
+    top: 8%;
+    left: -3%;
+    z-index: 3;
+}
+
+.s1-5 {
+    width: 14%;
+    position: absolute;
+    top: 27%;
+    left: 5%;
+    z-index: 3;
+}
+
+.s2-1 {
+    width: 62.5%;
+    position: absolute;
+    top: 13%;
+    left: 7%;
+}
+
+.s2-1_front {
+    width: 67%;
+    position: absolute;
+    top: 20%;
+    left: 27%;
+}
+
+.s2-2 {
+    width: 62.5%;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+}
+
+.s2-2_front {
+    width: 82.5%;
+    position: absolute;
+    top: 37%;
+    left: 5%;
+}
+
+.s2-3 {
+    width: 62.5%;
+    position: absolute;
+    top: 47%;
+    left: 7%;
+}
+
+.s2-3_front {
+    width: 63.5%;
+    position: absolute;
+    top: 54.5%;
+    left: 27%;
+}
+
+.s2-4 {
+    width: 62.5%;
+    position: absolute;
+    top: 64.5%;
+    left: 32%;
+}
+
+.s2-4_front {
+    width: 67.5%;
+    position: absolute;
+    top: 71.5%;
+    left: 4%;
+}
+
+.s3-1 {
+    width: 57.5%;
+    position: absolute;
+    top: 3.5%;
+    left: 21%;
+}
+
+.s3-2 {
+    width: 90%;
+    position: absolute;
+    top: 5.5%;
+    left: 5%;
+}
+
+.s3-3 {
+    width: 64.5%;
+    position: absolute;
+    top: 30%;
+    left: -6%;
+}
+
+.s3-4 {
+    width: 70%;
+    position: absolute;
+    top: 31%;
+    right: -4%;
+}
+
+.s3-5 {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    -webkit-mask: url('../images/title_05.webp') no-repeat center center;
+    -webkit-mask-size: contain;
+    mask: url('../images/title_05.webp') no-repeat center center;
+    mask-size: contain;
+}
+
+.s3-w1 {
+    width: 14%;
+    position: absolute;
+    top: 7%;
+    left: 8%;
+}
+
+.s3-w2 {
+    width: 14%;
+    position: absolute;
+    top: 7%;
+    left: 22%;
+}
+
+.s3-w3 {
+    width: 14%;
+    position: absolute;
+    top: 7%;
+    left: 35%;
+}
+
+.s3-w4 {
+    width: 14%;
+    position: absolute;
+    top: 7%;
+    left: 49%;
+}
+
+.s3-w5 {
+    width: 14%;
+    position: absolute;
+    top: 7%;
+    left: 62.5%;
+}
+
+.s3-w6 {
+    width: 14%;
+    position: absolute;
+    top: 7%;
+    left: 76%;
+}
+
+.s7-1 {
+    width: 80%;
+    position: absolute;
+    top: 16.5%;
+    left: 10%;
+}
+
+.s7-2 {
+    width: 100%;
+    position: absolute;
+    bottom: 12.5%;
+    left: 0%;
+    display: flex;
+    height: 21%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.s7-2 .marquee img {
+    margin: 0 -16px;
+}
+
+@media (max-width:576px) {
+    .s7-2 .marquee img {
+        margin: 0 -8px;
+    }
+}
+
+.s8-1 {
+    width: 39.5%;
+    position: absolute;
+    top: 17.5%;
+    left: 11%;
+    -webkit-mask: url('../images/offer01_pd.webp') no-repeat center center;
+    -webkit-mask-size: contain;
+    mask: url('../images/offer01_pd.webp') no-repeat center center;
+    mask-size: contain;
+}
+
+.s8-2 {
+    width: 18%;
+    position: absolute;
+    top: 38.5%;
+    right: 3%;
+    -webkit-mask: url('../images/offer01_sale.webp') no-repeat center center;
+    -webkit-mask-size: contain;
+    mask: url('../images/offer01_sale.webp') no-repeat center center;
+    mask-size: contain;
+}
+
+.s9-lovers {
+    width: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.s9-1 {
+    width: 12%;
+    position: absolute;
+    top: 11%;
+    left: 15%;
+    z-index: 2;
+}
+
+.s9-2 {
+    width: 28%;
+    position: absolute;
+    top: 52%;
+    left: -12%;
+    z-index: 2;
+}
+
+.s10-1 {
+    width: 18%;
+    position: absolute;
+    top: 0%;
+    left: 22%;
+}
+
+.s10-2 {
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.s10-3 {
+    width: 19%;
+    position: absolute;
+    top: 27%;
+    left: 22%;
+}
+
+.s10-w1 {
+    width: 8%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.s10-w2 {
+    width: 8%;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+}
+
+.s10-w3 {
+    width: 8%;
+    position: absolute;
+    top: 20%;
+    left: 37%;
+}
+
+.s10-w4 {
+    width: 7%;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+}
+
+.s10-w5 {
+    width: 7%;
+    position: absolute;
+    top: 20%;
+    left: 52.5%;
+}
+
+.s10-w6 {
+    width: 8%;
+    position: absolute;
+    top: 20%;
+    left: 59.5%;
+}
+
+.s10-w7 {
+    width: 9%;
+    position: absolute;
+    top: 20%;
+    left: 67.5%;
+}
+
+.s10-w8 {
+    width: 3.6%;
+    position: absolute;
+    top: 20%;
+    left: 76.5%;
+}
+
+.s11-1 {
+    width: 100%;
+    position: absolute;
+    top: 12.6%;
+    left: 0%;
+}
+
+.s11-2 {
+    width: 100%;
+    position: absolute;
+    top: 67.45%;
+    left: 0%;
+}
+
+.s11-3 {
+    width: 56%;
+    position: absolute;
+    top: 39.5%;
+    left: 22%;
+    -webkit-mask: url('../images/title_bg11.webp') no-repeat center center;
+    -webkit-mask-size: contain;
+    mask: url('../images/title_bg11.webp') no-repeat center center;
+    mask-size: contain;
+}
+
+.s12-1 {
+    width: 25%;
+    position: absolute;
+    top: 37%;
+    right: 2%;
+}
+
+.s12-2 {
+    width: 30%;
+    position: absolute;
+    top: 49.8%;
+    right: 3%;
+}
+
+.s12-3 {
+    width: 30%;
+    position: absolute;
+    top: 65%;
+    right: 9%;
+}
+
+.s12-4 {
+    width: 35%;
+    position: absolute;
+    top: 17%;
+    left: 3%;
+}
+
+.s13-1 {
+    width: 62%;
+    position: absolute;
+    top: 18.2%;
+    right: 3%;
+}
+
+.s13-2 {
+    width: 65%;
+    position: absolute;
+    top: 41.5%;
+    left: 2%;
+}
+
+.s15-1 {
+    width: 48%;
+    position: absolute;
+    top: 15.2%;
+    left: 3%;
+}
+
+.s15-2 {
+    width: 38%;
+    position: absolute;
+    top: 21%;
+    left: 39.5%;
+}
+
+.s15-3 {
+    width: 21%;
+    position: absolute;
+    top: 43.5%;
+    right: 0%;
+    /* -webkit-mask: url('../images/offer2_sale.webp') no-repeat center center;
+    -webkit-mask-size: contain;
+    mask: url('../images/offer2_sale.webp') no-repeat center center;
+    mask-size: contain; */
+}
+
+.midofferBtn1 {
+    width: 73%;
+    position: absolute;
+    bottom: 7%;
+    left: 13.8%;
+}
+
+.midofferBtn2 {
+    width: 73%;
+    position: absolute;
+    bottom: 9%;
+    left: 13.5%;
+}
+
+.s18-1 {
+    width: 440px;
+    height: 440px;
+    position: absolute;
+    top: 15.7%;
+    left: 12.8%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.s18-1 img {
+    width: 100%;
+    position: absolute;
+    top: -23%;
+    top: 0%;
+}
+
+.s18-2 {
+    width: 43.5%;
+    position: absolute;
+    top: 15.7%;
+    left: 12.3%;
+    pointer-events: none;
+}
+
+.qa {
+    padding-top: 8%;
+    width: 84%;
+    margin: 0 auto;
+}
+
+.qa .collapse__Content img {
+    filter: drop-shadow(5px 5px 5px #4b4b4b);
+}
+
+@media (max-width:576px) {
+    .qa .collapse__Content img {
+        filter: drop-shadow(1px 1px 3px #4b4b4b);
+    }
+}
+
+.s20-1 {
+    width: 86%;
+    position: absolute;
+    top: 44.5%;
+    left: 14%;
+    z-index: 2;
+}
+
+.s20-2 {
+    width: 32%;
+    position: absolute;
+    top: 59.5%;
+    left: 5%;
+}
+
+.s20-3 {
+    width: 40%;
+    position: absolute;
+    top: 67.5%;
+    left: 35.5%;
+}
+
+.s20-4 {
+    width: 30%;
+    position: absolute;
+    top: 54%;
+    right: 2%;
+}
+
+.s21-1 {
+    width: 43%;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+.s21-2 {
+    width: 32%;
+    position: absolute;
+    top: 10.5%;
+    left: 34%;
+}
+
+.s21-3 {
+    width: 35%;
+    position: absolute;
+    top: 33.2%;
+    left: 57%;
+}
+
+.s21-4 {
+    width: 30%;
+    position: absolute;
+    top: 7%;
+    right: 1%;
+}
+
+.s21-5 {
+    width: 30%;
+    position: absolute;
+    top: 18%;
+    right: 13%;
+}
+
+.offer3-price {
+    width: 38%;
+    position: absolute;
+    bottom: 7%;
+    right: 8%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.offerBtn1 {
+    width: 73%;
+    position: absolute;
+    top: 46%;
+    left: 13.5%;
+}
+
+.offerBtn2 {
+    width: 36%;
+    position: absolute;
+    bottom: 5.8%;
+    left: 10%;
+}
+
+.offerBtn3 {
+    width: 36%;
+    position: absolute;
+    bottom: 5.8%;
+    right: 9.8%;
+}
+
+@media (max-width:1000px) {
+    .s18-1 {
+        width: 44vw;
+        height: 44vw;
+    }
+}
